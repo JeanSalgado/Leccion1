@@ -1,0 +1,21 @@
+<h1 class="animated fadeIn fast">Heroes <small>Marvel y DC</small> </h1>
+<hr>
+
+<div class="col animated fadeIn fast" *ngFor="let ruta of rutas; let i=index">
+    <div class="animated fadeIn fast card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img [src]="ruta.img" class="img-fluid rounded-start" [alt]="ruta.nombre">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ruta.nombre}}</h5>
+                    <p class="card-text">{{ruta.bio}}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{ruta.aparicion}}</small></p>
+
+                    <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Saber más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
